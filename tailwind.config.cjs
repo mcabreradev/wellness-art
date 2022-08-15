@@ -8,11 +8,17 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         domine: ['Domine'],
         poppins: ['Poppins'],
       },
+      padding: {
+        '5px': '5px',
+      }
     },
     colors: {
       transparent: 'transparent',

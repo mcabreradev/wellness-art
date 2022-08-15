@@ -1,11 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import tw from "tailwind-styled-components";
 
-interface NavbarProps {
-  sticky?: boolean;
-}
-
-const NavbarWrapper = tw.nav`
+const Wrapper = tw.nav<{ $sticky?: boolean }>`
   bg-transparent
   px-2 
   sm:px-4 
@@ -16,15 +12,14 @@ const NavbarWrapper = tw.nav`
   top-0 
   left-0 
 
-  ${(p: NavbarProps) =>
-    p.sticky &&
-    `
-    bg-red-500
+  ${({ $sticky }:any) =>
+    $sticky &&`
+    bg-white
     border-b 
     border-gray-200
     transition 
     ease-in-out 
-    delay-300
+    delay-100
   `}
 `;
 
@@ -68,21 +63,19 @@ const MobileButton = tw.button`
 `;
 
 const Navbar = () => {
-  const [sticky, setsticky] = useState(false);
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setsticky(true);
-    } else {
-      setsticky(false);
-    }
+    window.scrollY > 100 ? setSticky(true) : setSticky(false);
   };
 
-  window.addEventListener("scroll", handleScroll);
-
   return (
-    <NavbarWrapper sticky={sticky}>
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+    <Wrapper $sticky={sticky}>
+      <div className="flex flex-wrap justify-between items-center mx-auto">
         <a href="/" className="flex items-center">
           <img
             src="./wellness.svg"
@@ -95,7 +88,7 @@ const Navbar = () => {
           className="hidden justify-between items-center w-full md:flex md:w-auto"
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
             <li>
               <NavbarItem href="#">Services</NavbarItem>
             </li>
@@ -129,16 +122,15 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </MobileButton>
         </div>
-
       </div>
-    </NavbarWrapper>
+    </Wrapper>
   );
 };
 

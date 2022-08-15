@@ -43,6 +43,12 @@ function App() {
       <Grid>
         <Header>
           <Navbar/>
+          <div className="container bg-yellow-100 flex flex-row items-center justify-between">
+            <div className="">
+             Sientete bien y llega más lejos
+            </div>
+            <img src="./hands.png"></img>
+          </div>
         </Header>
         <Services className="my-20">
           Services
