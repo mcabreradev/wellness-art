@@ -1,6 +1,7 @@
-import { useState } from 'react'
 import styled from 'styled-components';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+
 import './App.css'
 
 const Grid = styled.div`
@@ -35,21 +36,15 @@ const Footer = styled.footer`
 `;
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      
       <Grid>
         <Header>
           <Navbar/>
-          <div className="container bg-yellow-100 flex flex-row items-center justify-between">
-            <div className="">
-             Sientete bien y llega más lejos
-            </div>
-            <img src="./hands.png"></img>
-          </div>
+          <Hero />
         </Header>
+
         <Services className="my-20">
           Services
         </Services>

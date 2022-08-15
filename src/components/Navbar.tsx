@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Button from "../components/Button";
+
 import tw from "tailwind-styled-components";
 
 const Wrapper = tw.nav<{ $sticky?: boolean }>`
@@ -31,25 +33,7 @@ const NavbarItem = tw.a`
   hover:underline
 `;
 
-const Button = tw.button`
-  inline-flex 
-  items-start 
-  justify-start 
-  px-5 
-  py-2.5 
-  bg-primary 
-  rounded-full 
-  font-thin
-  font-poppins 
-  text-lg 
-  text-white 
-  hover:bg-primary-100 
-  focus:ring-4 
-  focus:outline-none 
-  focus:ring-blue-100
-`;
-
-const MobileButton = tw.button`
+const BurgerButton = tw.button`
   md:hidden 
   inline-flex 
   items-center 
@@ -75,7 +59,7 @@ const Navbar = () => {
 
   return (
     <Wrapper $sticky={sticky}>
-      <div className="flex flex-wrap justify-between items-center mx-auto">
+      <div className="container mx-auto flex flex-wrap justify-between items-center">
         <a href="/" className="flex items-center">
           <img
             src="./wellness.svg"
@@ -107,7 +91,7 @@ const Navbar = () => {
         <div className="flex">
           <Button type="button">Book a masagge</Button>
 
-          <MobileButton
+          <BurgerButton
             data-collapse-toggle="navbar-sticky"
             type="button"
             aria-controls="navbar-sticky"
@@ -127,7 +111,7 @@ const Navbar = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </MobileButton>
+          </BurgerButton>
         </div>
       </div>
     </Wrapper>
