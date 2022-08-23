@@ -30,7 +30,6 @@ const NavbarItem = tw.a`
   leading-7 
   font-poppins 
   text-gray-800
-  hover:underline
 `;
 
 const BurgerButton = tw.button`
@@ -74,16 +73,16 @@ const Navbar = () => {
         >
           <ul className="flex flex-col p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
             <li>
-              <NavbarItem href="#">Services</NavbarItem>
+              <NavbarItem className="navbar-item" href="#">Services</NavbarItem>
             </li>
             <li>
-              <NavbarItem href="#">Therapists</NavbarItem>
+              <NavbarItem className="navbar-item" href="#">Therapists</NavbarItem>
             </li>
             <li>
-              <NavbarItem href="#">Location</NavbarItem>
+              <NavbarItem className="navbar-item" href="#">Location</NavbarItem>
             </li>
             <li>
-              <NavbarItem href="#">Contact</NavbarItem>
+              <NavbarItem className="navbar-item" href="#">Contact</NavbarItem>
             </li>
           </ul>
         </div>
