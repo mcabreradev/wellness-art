@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Services from './sections/Services';
 
 import './App.css'
 
@@ -22,7 +23,7 @@ const Header = styled.div`
   grid-area: header;
   height: 50vh; 
 `;
-const Services = styled.div`
+const ServicesWrapper = styled.div`
   grid-area: services;
 `;
 const AboutUs = styled.div`
@@ -45,9 +46,10 @@ function App() {
           <Hero />
         </Header>
 
-        <Services className="my-20">
-          Services
-        </Services>
+        <ServicesWrapper>
+          <Services/>
+        </ServicesWrapper>
+
         <AboutUs>
           About Us
         </AboutUs>
