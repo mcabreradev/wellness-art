@@ -1,3 +1,23 @@
+.gidcss {
+  display: grid; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: auto auto auto auto auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "header header header header"
+    "services services services services"
+    "about-us about-us about-us about-us"
+    "location location location location"
+    "footer footer footer footer"; 
+}
+
+.header { grid-area: header; }
+.services { grid-area: services; }
+.about-us { grid-area: about-us; }
+.location { grid-area: location; }
+.footer { grid-area: footer; }
+
 .navbar-item {
   background: 
       linear-gradient(currentColor 0 0) 

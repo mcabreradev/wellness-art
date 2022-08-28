@@ -48,11 +48,11 @@ const Image = tw.img`
   pb-6
 `;
 
-type Props = {className?: string}
+type Props = {}
 
-function Services({className}: Props) {
+function Services() {
   return (
-    <Container className={className}>
+    <Container className={'services'}>
       <Wrapper>
         <Left>
           <Image src="./gray-star.svg" />

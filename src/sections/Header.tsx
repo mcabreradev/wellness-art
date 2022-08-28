@@ -1,14 +1,12 @@
-import React from 'react'
-import styled from 'styled-components';
-
-const CustomHeader = styled.div`
-  grid-area: header;
-  height: 50vh; 
-`;
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
 
 function Header() {
   return (
-    <CustomHeader>Header</CustomHeader>
+    <div className={'header'}>
+      <Navbar />
+      <Hero />
+    </div>
   )
 }
 
