@@ -8,9 +8,6 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
-    // container: {
-    //   center: true,
-    // },
     extend: {
       fontFamily: {
         domine: ['Domine'],
@@ -24,7 +21,7 @@ module.exports = {
       transparent: 'transparent',
       white: '#fff',
       background: '##D9D9D9',
-      gray: '#F4F4F4',
+      gris: '#F4F4F4',
       black: '#292929',
       primary: '#4242E9',
       secondary: '#335460',
@@ -33,6 +30,7 @@ module.exports = {
       beige: '#E9E5DA'
     },
     fontSize: {
+      "sm": "14px",
       "base": "1rem",
       "lg": "1.125rem",
       "xl": "1.875rem",

@@ -1,14 +1,14 @@
 import tw from "tailwind-styled-components";
 import Button from "../components/Button";
+import Accordion from "../components/Accordion";
 
 const Container = tw.div`
-  my-20
 bg-beige
 `;
 
 const Wrapper = tw.div`
   flex 
-  flex-col 
+  flex-row 
   items-start 
   justify-between 
   container 
@@ -23,6 +23,13 @@ const Left = tw.div`
   items-start 
   justify-between 
   w-[397px]
+`;
+
+const Right = tw.div`
+  flex 
+  flex-col 
+  items-end 
+  justify-between 
 `;
 
 const Title = tw.h1`
@@ -64,6 +71,10 @@ function Services() {
           </Paragraph>
           <Button className="mt-5" size="lg">Book a masagge</Button>
         </Left>
+
+        <Right>
+          <Accordion/>
+        </Right>
 
       </Wrapper>
     </Container>
