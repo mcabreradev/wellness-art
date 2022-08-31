@@ -3,17 +3,18 @@ import Button from "./Button";
 
 type Props = {};
 
-const Container = tw.div`
-  container 
-  mx-auto 
-  px-24 
+const Wrapper = tw.div`
   flex 
   flex-row 
   items-center 
   justify-between
+  container 
+  max-w-7xl 
+  mx-auto
+  mb-28
 `;
 
-const Wrapper = tw.div`
+const Container = tw.div`
   flex 
   flex-col 
   items-start 
@@ -41,8 +42,8 @@ const Paragraph = tw.p`
 
 const Hero = ({}: Props) => {
   return (
-    <Container>
-      <Wrapper>
+    <Wrapper>
+      <Container>
         <Title className="py-5">
           Sientete bien y llega más lejos
         </Title>
@@ -50,12 +51,12 @@ const Hero = ({}: Props) => {
           Tenemos los masajes necesarios para ayudarte a alcanzar tus metas
         </Paragraph>
         <Button className="mt-5" size="lg">Book a masagge</Button>
-      </Wrapper>
+      </Container>
 
       <div className="">
         <img src="./hands.png" />
       </div>
-    </Container>
+    </Wrapper>
   );
 };
 

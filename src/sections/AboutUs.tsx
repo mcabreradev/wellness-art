@@ -3,7 +3,9 @@ import tw from "tailwind-styled-components";
 import Phil from '../components/Pill';
 
 const Wrapper = tw.div`
-
+  container 
+  max-w-7xl 
+  mx-auto
 `;
 
 const Container = tw.div`
@@ -11,10 +13,7 @@ const Container = tw.div`
   flex-col 
   items-start 
   justify-between 
-  container 
-  mx-auto 
   py-36
-  pl-24
 `;
 
 const Title = tw.h1`
@@ -43,16 +42,15 @@ const Up = tw.div`
   w-[397px]
 `;
 
-const Down = tw.div`
-bg-gris
+const PeopleContainer = tw.div`
   flex 
   flex-col 
   items-start 
   justify-between 
   my-auto
-  mx-24
   px-28
   py-36
+  bg-gris
 `;
 
 const People = tw.div`
@@ -61,6 +59,7 @@ const People = tw.div`
   items-start 
   justify-between 
   mb-14
+  self-center
 `;
 
 const PeoplePhoto = tw.div`
@@ -84,7 +83,7 @@ function AboutUs() {
         </Up>
       </Container>
 
-      <Down className="">
+      <PeopleContainer className="">
         <People className="">
           <PeoplePhoto className="">
             <img src="./nan.png"/>
@@ -144,7 +143,7 @@ function AboutUs() {
             <Phil>Foot reflexology</Phil>
           </div>
         </People>
-      </Down>
+      </PeopleContainer>
     </Wrapper>
   )
 }

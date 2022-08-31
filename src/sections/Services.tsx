@@ -2,19 +2,19 @@ import tw from "tailwind-styled-components";
 import Button from "../components/Button";
 import Accordion from "../components/Accordion";
 
-const Container = tw.div`
-bg-beige
+const Wrapper = tw.div`
+  bg-beige
 `;
 
-const Wrapper = tw.div`
+const Container = tw.div`
   flex 
   flex-row 
   items-start 
   justify-between 
-  container 
-  mx-auto 
   py-36
-  px-24
+  container 
+  max-w-7xl 
+  mx-auto
 `;
 
 const Left = tw.div`
@@ -59,8 +59,8 @@ type Props = {}
 
 function Services() {
   return (
-    <Container className={'services'}>
-      <Wrapper>
+    <Wrapper className={'services'}>
+      <Container>
         <Left>
           <Image src="./gray-star.svg" />
           <Title className="pb-1">
@@ -76,8 +76,8 @@ function Services() {
           <Accordion/>
         </Right>
 
-      </Wrapper>
-    </Container>
+      </Container>
+    </Wrapper>
   )
 }
 

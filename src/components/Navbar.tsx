@@ -25,6 +25,17 @@ const Wrapper = tw.nav<{ $sticky?: boolean }>`
   `}
 `;
 
+const Container = tw.div`
+  flex 
+  flex-wrap 
+  justify-between 
+  items-center
+
+  container 
+  max-w-8xl 
+  mx-auto
+`;
+
 const NavbarItem = tw.a`
   text-base 
   leading-7 
@@ -58,20 +69,21 @@ const Navbar = () => {
 
   return (
     <Wrapper $sticky={sticky}>
-      <div className="container mx-auto flex flex-wrap justify-between items-center">
-        <a href="/" className="flex items-center">
-          <img
-            src="./wellness.svg"
-            className="mr-4 h-8 sm:h-9"
-            alt="Wellness Logo"
-          />
-        </a>
+      <Container>
 
         <div
           className="hidden justify-between items-center w-full md:flex md:w-auto"
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
+          <a href="/" className="flex items-center">
+            <img
+              src="./wellness.svg"
+              className="mr-4 h-8 sm:h-9"
+              alt="Wellness Logo"
+            />
+          </a>
+
+          <ul className="flex flex-col lg:pl-28 p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
             <li>
               <NavbarItem className="navbar-item" href="#">Services</NavbarItem>
             </li>
@@ -88,8 +100,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex">
-          <Button type="button">Book a masagge</Button>
-
+          <Button type="button" className="sm:hidden lg:block">Book a masagge</Button>
           <BurgerButton
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -112,7 +123,7 @@ const Navbar = () => {
             </svg>
           </BurgerButton>
         </div>
-      </div>
+      </Container>
     </Wrapper>
   );
 };
