@@ -36,7 +36,7 @@ const AccordionUI = ({ title, content }: any) => {
 
   const HandleOpening = () => {
     setOpened(!isOpened)
-    setHeight(!isOpened ? `${contentElement?.current}px` : "0px")
+    setHeight(!isOpened ? `${contentElement?.current?.scrollHeight}px` : "0px")
   }
   return (
     <Container onClick={HandleOpening}>
@@ -47,7 +47,7 @@ const AccordionUI = ({ title, content }: any) => {
       <div
         ref={contentElement}
         style={{ height: height }}
-        className="overflow-hidden transition-all duration-500"
+        className="overflow-hidden transition-all duration-350"
       >
         <Content>{content}</Content>
       </div>
