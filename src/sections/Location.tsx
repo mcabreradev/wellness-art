@@ -7,6 +7,7 @@ const Container = tw.div`
   items-center 
   justify-center 
   flex-col
+  pb-32
 `;
 
 const Title = tw.h1`
@@ -34,7 +35,6 @@ export default function Location() {
         <Title>Located in the center of Edmont</Title>
         <Paragraph>We offer you the best instalaciones para birndarte el mejor servicio</Paragraph>
       </div>
-
       <Map/>
     </Container>
   )
