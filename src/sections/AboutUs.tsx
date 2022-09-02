@@ -71,7 +71,7 @@ const PeoplePhoto = tw.div`
 
 function AboutUs() {
   return (
-    <Wrapper className={'about-us'}>
+    <Wrapper className={'about-us'} name="about-us">
       <Container>
         <Up>
           <Title className="pb-4">

@@ -1,4 +1,6 @@
 import tw from "tailwind-styled-components";
+import { Element } from 'react-scroll'
+
 import Button from "../components/Button";
 import Accordion from "../components/Accordion";
 
@@ -59,7 +61,7 @@ type Props = {}
 
 function Services() {
   return (
-    <Wrapper className={'services'}>
+    <Wrapper name="services" className={'services'}>
       <Container>
         <Left>
           <Image src="./gray-star.svg" />

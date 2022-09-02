@@ -25,7 +25,7 @@ const Text = tw.p`
 
 export default function Footer() {
   return (
-    <Wrapper className={'footer'}>
+    <Wrapper className={'footer'} name="footer">
       <Container>
         <img src="./wellness-footer.svg"/>
         <div className="w-[320px]">

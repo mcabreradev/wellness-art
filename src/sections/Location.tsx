@@ -30,7 +30,7 @@ const Paragraph = tw.p`
 
 export default function Location() {
   return (
-    <Container className={'location'}>
+    <Container className={'location'} name="location">
       <div className="my-28">
         <Title>Located in the center of Edmont</Title>
         <Paragraph>We offer you the best instalaciones para birndarte el mejor servicio</Paragraph>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import Button from "../components/Button";
-
 import tw from "tailwind-styled-components";
+import { Link } from 'react-scroll';
+
+import Button from "../components/Button";
 
 const Wrapper = tw.nav<{ $sticky?: boolean }>`
   bg-transparent
@@ -75,26 +76,36 @@ const Navbar = () => {
           className="hidden justify-between items-center w-full md:flex md:w-auto"
           id="navbar-sticky"
         >
-          <a href="/" className="flex items-center">
-            <img
-              src="./wellness.svg"
-              className="mr-4 h-8 sm:h-9"
-              alt="Wellness Logo"
-            />
-          </a>
+          <Link to="header" spy={true} smooth={true} offset={0} duration={500}>
+            <a href="/" className="flex items-center">
+              <img
+                src="./wellness.svg"
+                className="mr-4 h-8 sm:h-9"
+                alt="Wellness Logo"
+              />
+            </a>
+          </Link>
 
           <ul className="flex flex-col lg:pl-28 p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
             <li>
-              <NavbarItem className="navbar-item" href="#">Services</NavbarItem>
+              <Link to="services" spy={true} smooth={true} offset={-60} duration={500}>
+                <NavbarItem className="navbar-item" href="#">Services</NavbarItem>
+              </Link>
             </li>
             <li>
-              <NavbarItem className="navbar-item" href="#">Therapists</NavbarItem>
+              <Link to="about-us" spy={true} smooth={true} offset={-50} duration={500}>
+                <NavbarItem className="navbar-item" href="#">Therapists</NavbarItem>
+              </Link>
             </li>
             <li>
-              <NavbarItem className="navbar-item" href="#">Location</NavbarItem>
+              <Link to="location" spy={true} smooth={true} offset={-70} duration={500}>
+                <NavbarItem className="navbar-item" href="#">Location</NavbarItem>
+              </Link>
             </li>
             <li>
-              <NavbarItem className="navbar-item" href="#">Contact</NavbarItem>
+              <Link to="footer" spy={true} smooth={true} offset={50} duration={500}>
+                <NavbarItem className="navbar-item" href="#">Contact</NavbarItem>
+              </Link>
             </li>
           </ul>
         </div>
