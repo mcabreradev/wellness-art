@@ -36,7 +36,7 @@ const AccordionUI = ({ title, content }: any) => {
 
   const HandleOpening = () => {
     setOpened(!isOpened)
-    setHeight(!isOpened ? `${contentElement?.current?.scrollHeight}px` : "0px")
+    setHeight(!isOpened ? `${contentElement?.current}px` : "0px")
   }
   return (
     <Container onClick={HandleOpening}>
