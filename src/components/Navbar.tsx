@@ -103,7 +103,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="footer" spy={true} smooth={true} offset={50} duration={1750}>
+              <Link to="footer" spy={true} smooth={true} offset={50} duration={1000}>
                 <NavbarItem className="navbar-item" href="#">Contact</NavbarItem>
               </Link>
             </li>
