@@ -88,7 +88,7 @@ const Navbar = () => {
 
           <ul className="flex flex-col lg:pl-28 p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
             <li>
-              <Link to="services" spy={true} smooth={true} offset={-60} duration={500}>
+              <Link to="services" spy={true} smooth={true} offset={-60} duration={750}>
                 <NavbarItem className="navbar-item" href="#">Services</NavbarItem>
               </Link>
             </li>
@@ -103,7 +103,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="footer" spy={true} smooth={true} offset={50} duration={500}>
+              <Link to="footer" spy={true} smooth={true} offset={50} duration={1750}>
                 <NavbarItem className="navbar-item" href="#">Contact</NavbarItem>
               </Link>
             </li>
