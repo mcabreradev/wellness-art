@@ -58,14 +58,14 @@ const AccordionUI = ({ title, content }: any) => {
 export default function Accordion() {
   const items = [
     {title: 'Deep tissue', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
-    {title: 'Relaxation', content: ''},
-    {title: 'Thai combo with deep tissue', content: ''},
-    {title: 'Cranial sacral', content: ''},
-    {title: 'Lymphatic drainage', content: ''},
-    {title: 'Express head & neck', content: ''},
-    {title: 'Foot reflexology', content: ''},
-    {title: 'Prenatal massage', content: ''},
-    {title: 'Cupping', content: ''}
+    {title: 'Relaxation', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
+    {title: 'Thai combo with deep tissue', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
+    {title: 'Cranial sacral', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
+    {title: 'Lymphatic drainage', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
+    {title: 'Express head & neck', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
+    {title: 'Foot reflexology', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
+    {title: 'Prenatal massage', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'},
+    {title: 'Cupping', content: 'Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and'}
   ];
 
   return (
