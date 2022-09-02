@@ -46,11 +46,18 @@ export default function Footer() {
             booking@wellnessartmassage.com
           </Text>
 
-          <Text className="font-bold">Find us on</Text>
-          <div className="flex flex-row justify-between items-center align-center w-auto">
-            <img className="self-center" src="./ig.svg" />
-            <img className="self-center" src="./in.svg" />
-            <img className="self-cente" src="./facebook.svg" />
+          <Text className="font-bold mb-4">Find us on</Text>
+          <div 
+            className="flex flex-row justify-start items-center">
+            <a href="#">
+              <img className="pr-6" src="./ig.svg" />
+            </a>
+            <a href="#">
+              <img className="pr-6" src="./in.svg" />
+            </a>
+            <a href="#">
+              <img className="" src="./facebook.svg" />
+            </a>
           </div>
         </div>
       </Container>
