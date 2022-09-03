@@ -5,13 +5,14 @@ type Props = {};
 
 const Wrapper = tw.div`
   flex 
-  flex-row 
+  flex-col-reverse
+  md:flex-row
   items-center 
   justify-between
-  container 
   max-w-7xl 
-  mx-auto
-  mb-28
+  md:mx-auto
+  md:mb-28
+  mx-5
 `;
 
 const Container = tw.div`
@@ -19,12 +20,13 @@ const Container = tw.div`
   flex-col 
   items-start 
   justify-between 
-  w-[382px]
+  md:w-[382px]
 `;
 
 const Title = tw.h1`
   font-normal 
-  text-3xl 
+  text-2xl 
+  md:text-3xl 
   leading-[3.5rem] 
   not-italic 
   text-black
@@ -33,7 +35,8 @@ const Title = tw.h1`
 
 const Paragraph = tw.p`
   font-normal 
-  text-lg 
+  text-base
+  md:text-lg 
   leading-[1.8rem] 
   not-italic 
   text-black
@@ -44,13 +47,17 @@ const Hero = ({}: Props) => {
   return (
     <Wrapper>
       <Container>
-        <Title className="py-5">
+        <Title className="pt-16 md:py-5">
           Sientete bien y llega más lejos
         </Title>
         <Paragraph className="py-5">
           Tenemos los masajes necesarios para ayudarte a alcanzar tus metas
         </Paragraph>
-        <Button className="mt-5" size="lg">Book a masagge</Button>
+        <Button 
+          className="mt-5 mx-auto md:mx-0" 
+          size="lg"
+          href="https://wellnessartinc.clinicsense.com/"
+          >Book a masagge</Button>
       </Container>
 
       <div className="">

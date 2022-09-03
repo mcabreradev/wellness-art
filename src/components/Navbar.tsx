@@ -44,17 +44,19 @@ const NavbarItem = tw.a`
   text-gray-800
 `;
 
-const BurgerButton = tw.button`
+const BurgerButton = tw.a`
   md:hidden 
   inline-flex 
   items-center 
-  p-2 text-sm 
+  p-2 
+  text-sm 
   text-gray-500 
   rounded-lg
-  hover:bg-gray-100 
+  hover:bg-transparent
   focus:outline-none 
   focus:ring-2 
   focus:ring-gray-200
+  ml-2
 `;
 
 const Navbar = () => {
@@ -111,7 +113,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex">
-          <Button type="button" className="sm:hidden lg:block">Book a masagge</Button>
+          <Button type="button" className="hidden lg:block" href="https://wellnessartinc.clinicsense.com/">Book a masagge</Button>
           <BurgerButton
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -119,19 +121,7 @@ const Navbar = () => {
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
+            <img src="./burger.svg" />
           </BurgerButton>
         </div>
       </Container>
