@@ -17,9 +17,9 @@ const Wrapper = tw.nav<{ $sticky?: boolean }>`
 
   ${({ $sticky }:any) =>
     $sticky &&`
-    bg-white
-    border-b 
-    border-gray-200
+    bg-transparent
+    md:bg-white
+    md:border-gray-200
     transition 
     ease-in-out 
     delay-100
@@ -73,7 +73,6 @@ const Navbar = () => {
   return (
     <Wrapper $sticky={sticky}>
       <Container>
-
         <div
           className="hidden justify-between items-center w-full md:flex md:w-auto"
           id="navbar-sticky"

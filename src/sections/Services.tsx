@@ -10,13 +10,13 @@ const Wrapper = tw.div`
 
 const Container = tw.div`
   flex 
-  flex-row 
+  flex-col md:flex-row 
   items-start 
   justify-between 
-  py-36
-  container 
+  py-24 md:py-36
   max-w-7xl 
   mx-auto
+  px-5
 `;
 
 const Left = tw.div`
@@ -24,7 +24,7 @@ const Left = tw.div`
   flex-col 
   items-start 
   justify-between 
-  w-[397px]
+  md:w-[397px]
 `;
 
 const Right = tw.div`
@@ -36,7 +36,7 @@ const Right = tw.div`
 
 const Title = tw.h1`
   font-normal 
-  text-2xl
+  text-xl md:text-2xl
   leading-[3.5rem] 
   not-italic 
   text-black
@@ -45,7 +45,7 @@ const Title = tw.h1`
 
 const Paragraph = tw.p`
   font-normal 
-  text-lg 
+  text-base md:text-lg 
   leading-[1.8rem] 
   not-italic 
   text-black
@@ -68,10 +68,10 @@ function Services() {
           <Title className="pb-1">
             Our Service
           </Title>
-          <Paragraph className="pb-5">
+          <Paragraph className="pb-8 md:pb-5">
             Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise
           </Paragraph>
-          <Button className="mt-5" size="lg">Book a masagge</Button>
+          <Button className="mt-5 hidden md:block" size="lg">Book a masagge</Button>
         </Left>
 
         <Right>
