@@ -4,15 +4,18 @@ type Props = {
   children: React.ReactNode;
   type?: string;
   size?: string;
+  href?: string;
   className?: string;
 };
 
-const Component = tw.button<{ size?: string }>`
+const Component = tw.a<{ size?: string }>`
   inline-flex 
   items-start 
   justify-start 
-  px-5 
-  py-2.5 
+  px-24 
+  md:px-5 
+  py-3
+  md:py-2.5 
   bg-primary 
   rounded-full 
   font-thin
@@ -23,13 +26,15 @@ const Component = tw.button<{ size?: string }>`
   focus:ring-4 
   focus:outline-none 
   focus:ring-blue-100
+  cursor-pointer
 
-  ${({ size }: any) => size === "lg" && `px-20`}
+  ${({ size }: any) => size === "lg" && `md:px-20`}
+
 `;
 
-const Button = ({ children, type, className, size }: Props) => {
+const Button = ({ children, type, className, size, href }: Props) => {
   return (
-    <Component type={type} className={className} size={size}>
+    <Component type={type} className={className} size={size} href={href || null} target="_blank">
       {children}
     </Component>
   );
