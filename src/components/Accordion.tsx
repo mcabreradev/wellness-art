@@ -2,7 +2,7 @@ import { useState, useRef } from "react"
 import tw from "tailwind-styled-components";
 
 const Container = tw.div`
-  w-[529px]
+  md:w-[529px]
   border-b 
   border-black
   cursor-pointer
@@ -10,7 +10,7 @@ const Container = tw.div`
 
 const Title = tw.div`
   font-normal 
-  text-xl 
+  text-[25px] md:text-xl 
   leading-[3.5rem] 
   not-italic 
   text-black
@@ -19,13 +19,13 @@ const Title = tw.div`
 
 const Content = tw.div`
   font-normal 
-  text-lg 
+  text-base md:text-lg 
   leading-7
   not-italic 
   text-black
   font-poppins
   pt-2
-  pl-5
+  pl-3 md:pl-5
   pb-10
 `;
 
