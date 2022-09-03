@@ -38,16 +38,19 @@ const AccordionUI = ({ title, content }: any) => {
     setOpened(!isOpened)
     setHeight(!isOpened ? `${contentElement?.current?.scrollHeight}px` : "0px")
   }
+
+  const imgSrc = isOpened ? "./minus.svg" : "./plus.svg";
+
   return (
     <Container onClick={HandleOpening}>
       <div className={"flex text-base justify-between items-center py-3"}>
         <Title>{title}</Title>
-        {isOpened ? <img src="./minus.svg" /> : <img src="./plus.svg" />}
+        <img src={imgSrc} />
       </div>
       <div
         ref={contentElement}
         style={{ height: height }}
-        className="overflow-hidden transition-all duration-350"
+        className="overflow-hidden transition-all duration-700"
       >
         <Content>{content}</Content>
       </div>
