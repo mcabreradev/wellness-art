@@ -13,6 +13,7 @@ const Wrapper = tw.div`
   md:mx-auto
   md:mb-28
   mx-5
+  mb-16
 `;
 
 const Container = tw.div`
