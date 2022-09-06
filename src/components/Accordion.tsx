@@ -50,7 +50,7 @@ const AccordionUI = ({ title, content }: any) => {
       <div
         ref={contentElement}
         style={{ height: height }}
-        className="overflow-hidden transition-all duration-700"
+        className="overflow-hidden transition-all duration-500"
       >
         <Content>{content}</Content>
       </div>

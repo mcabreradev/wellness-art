@@ -16,7 +16,7 @@ const Container = tw.div`
   py-24 md:py-36
   max-w-7xl 
   mx-auto
-  px-5
+  px-8 md:px-0
 `;
 
 const Left = tw.div`

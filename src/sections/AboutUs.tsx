@@ -14,6 +14,7 @@ const Container = tw.div`
   items-start 
   justify-between 
   py-36
+  px-8 md:px-0
 `;
 
 const Title = tw.h1`
@@ -32,6 +33,8 @@ const Paragraph = tw.p`
   not-italic 
   text-black
   font-poppins
+  pb-5 
+  w-full md:w-[500px]
 `;
 
 const Up = tw.div`
@@ -39,7 +42,7 @@ const Up = tw.div`
   flex-col 
   items-start 
   justify-between 
-  w-[397px]
+  w-full md:w-[397px]
 `;
 
 const PeopleContainer = tw.div`
@@ -77,7 +80,7 @@ function AboutUs() {
           <Title className="pb-4">
             We are a small brand with a huge heart
           </Title>
-          <Paragraph className="pb-5 w-[500px]">
+          <Paragraph>
             Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain
           </Paragraph>
         </Up>
