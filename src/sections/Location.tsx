@@ -31,7 +31,7 @@ const Paragraph = tw.p`
 export default function Location() {
   return (
     <Container className={'location'} name="location">
-      <div className="my-28 px-8 md:px-0">
+      <div className="my-24 md:my-28 px-8 md:px-0">
         <Title>Located in the center of Edmont</Title>
         <Paragraph>We offer you the best instalaciones para birndarte el mejor servicio</Paragraph>
       </div>

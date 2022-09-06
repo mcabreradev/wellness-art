@@ -6,12 +6,13 @@ const Wrapper = tw.div`
 
 const Container = tw.div`
   flex 
-  flex-row 
+  flex-col md:flex-row 
   justify-between 
   py-24
   container 
   max-w-6xl 
   mx-auto
+  px-8 md:px-0
 `;
 
 const Text = tw.p`
@@ -27,10 +28,12 @@ export default function Footer() {
   return (
     <Wrapper className={'footer'} name="footer">
       <Container>
-        <img src="./wellness-footer.svg"/>
+        <div className="height-[150px] self-center pb-12 md:pb-0" >
+          <img src="./wellness-footer.svg"/>
+        </div>
         <div className="w-[320px]">
           <Text className="font-bold">Address</Text>
-          <Text className="pb-6">
+          <Text className="pb-7 md:pb-6">
             12328 102 Ave. Evolve Strenght. Office 105 Edmonton, AB - T5N 0L9
           </Text>
 
@@ -42,11 +45,11 @@ export default function Footer() {
 
         <div className="w-[320px]">
           <Text className="font-bold">Email</Text>
-          <Text className="pb-6">
+          <Text className="pb-7 md:pb-6">
             booking@wellnessartmassage.com
           </Text>
 
-          <Text className="font-bold mb-4">Find us on</Text>
+          <Text className="font-bold pb-7 md:pb-6">Find us on</Text>
           <div 
             className="flex flex-row justify-start items-center">
             <a href="#">
