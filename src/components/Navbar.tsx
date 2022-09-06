@@ -67,7 +67,7 @@ const Navbar = () => {
   });
 
   const handleScroll = () => {
-    window.scrollY > 300 ? setSticky(true) : setSticky(false);
+    window.scrollY > 50 ? setSticky(true) : setSticky(false);
   };
 
   return (
