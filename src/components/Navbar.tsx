@@ -18,8 +18,8 @@ const Wrapper = tw.nav<{ $sticky?: boolean }>`
   ${({ $sticky }:any) =>
     $sticky &&`
     bg-transparent
-    md:bg-white
-    md:border-gray-200
+    lg:bg-white
+    lg:border-gray-200
     transition 
     ease-in-out 
     delay-100
@@ -45,7 +45,7 @@ const NavbarItem = tw.span`
 `;
 
 const BurgerButton = tw.a`
-  md:hidden 
+  lg:hidden 
   inline-flex 
   items-center 
   p-2 
@@ -79,7 +79,7 @@ const Navbar = () => {
     <Wrapper $sticky={sticky}>
       <Container>
         <div
-          className="hidden justify-between items-center w-full md:flex md:w-auto"
+          className="hidden justify-between items-center w-full lg:flex lg:w-auto"
           id="navbar-sticky"
         >
           <Link to="header" spy={true} smooth={true} offset={0} duration={500}>
@@ -92,7 +92,7 @@ const Navbar = () => {
             </a>
           </Link>
 
-          <ul className="flex flex-col lg:pl-28 p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
+          <ul className="flex flex-col lg:pl-28 p-4 mt-4 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium ">
             <li>
               <Link to="services" spy={true} smooth={true} offset={-60} duration={750}>
                 <NavbarItem className="navbar-item" href="#">Services</NavbarItem>
