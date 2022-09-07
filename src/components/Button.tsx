@@ -13,9 +13,9 @@ const Component = tw.a<{ size?: string }>`
   items-start 
   justify-start 
   px-24 
-  md:px-5 
+  lg:px-5 
   py-3
-  md:py-2.5 
+  lg:py-2.5 
   bg-primary 
   rounded-full 
   font-thin
@@ -28,7 +28,7 @@ const Component = tw.a<{ size?: string }>`
   focus:ring-blue-100
   cursor-pointer
 
-  ${({ size }: any) => size === "lg" && `md:px-20`}
+  ${({ size }: any) => size === "lg" && `lg:px-20`}
 
 `;
 
