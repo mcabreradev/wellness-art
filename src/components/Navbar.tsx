@@ -37,7 +37,7 @@ const Container = tw.div`
   mx-auto
 `;
 
-const NavbarItem = tw.a`
+const NavbarItem = tw.span`
   text-base 
   leading-7 
   font-poppins 
@@ -61,6 +61,7 @@ const BurgerButton = tw.a`
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -69,6 +70,10 @@ const Navbar = () => {
   const handleScroll = () => {
     window.scrollY > 50 ? setSticky(true) : setSticky(false);
   };
+
+  const handleClick = () => {
+    setToggle((prev) => !prev)
+  }
 
   return (
     <Wrapper $sticky={sticky}>
@@ -116,12 +121,62 @@ const Navbar = () => {
           <BurgerButton
             data-collapse-toggle="navbar-sticky"
             type="button"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
+            onClick={handleClick}
           >
             <span className="sr-only">Open main menu</span>
             <img src="./burger.svg" />
           </BurgerButton>
+        </div>
+
+        <div className={`bg-white flex flex-col w-full h-[100vh] p-10 absolute top-0 right-0 ${toggle&&'hidden'}`}>
+          <img 
+            className="rotate-45 w-[60px] self-end" 
+            src="./plus.svg" 
+            onClick={handleClick}/>
+
+          <Link to="header" spy={true} smooth={true} offset={0} duration={500} onClick={handleClick}>
+            <a href="/" className="">
+              <img
+                src="./wellness.svg"
+                className="h-12"
+                alt="Wellness Logo"
+              />
+            </a>
+          </Link>
+
+          <ul className="flex flex-col py-4 mt-4">
+            <li className="border-b border-gray-300 pt-8 pb-4">
+              <Link to="services" spy={true} smooth={true} offset={20} duration={750} onClick={handleClick}>
+                <NavbarItem 
+                  className="text-[24px]" 
+                  href="#">Services
+                  </NavbarItem>
+              </Link>
+            </li>
+            <li className="border-b border-gray-300 pt-8 pb-4">
+              <Link to="about-us" spy={true} smooth={true} offset={0} duration={750} onClick={handleClick}>
+                <NavbarItem className="text-[24px]" href="#">Therapists</NavbarItem>
+              </Link>
+            </li>
+            <li className="border-b border-gray-300 pt-8 pb-4">
+              <Link to="location" spy={true} smooth={true} offset={0} duration={750} onClick={handleClick}>
+                <NavbarItem className="text-[24px]" href="#">Location</NavbarItem>
+              </Link>
+            </li>
+            <li className="border-b border-gray-300 pt-8 pb-4">
+              <Link to="footer" spy={true} smooth={true} offset={0} duration={750} onClick={handleClick}>
+                <NavbarItem className="text-[24px]" href="#">Contact</NavbarItem>
+              </Link>
+            </li>
+            <li className="pt-12">
+              <Button 
+                className="inline-flex items-start justify-start px-12 py-2.5 bg-indigo-600 rounded-full" 
+                size="lg"
+                href="https://wellnessartinc.clinicsense.com/"
+                >Book a masagge</Button>
+            </li>
+          </ul>
+
         </div>
       </Container>
     </Wrapper>

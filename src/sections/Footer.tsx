@@ -2,6 +2,7 @@ import tw from "tailwind-styled-components";
 
 const Wrapper = tw.div`
   bg-secondary
+  h-max
 `;
 
 const Container = tw.div`
@@ -13,6 +14,7 @@ const Container = tw.div`
   max-w-6xl 
   mx-auto
   px-8 md:px-0
+  
 `;
 
 const Text = tw.p`
