@@ -42,6 +42,7 @@ const NavbarItem = tw.span`
   leading-7 
   font-poppins 
   text-gray-800
+  cursor-pointer
 `;
 
 const BurgerButton = tw.a`
