@@ -63,6 +63,7 @@ const BurgerButton = tw.a`
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [toggle, setToggle] = useState(true);
+  const [hidden, setHidden] = useState(true);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -74,6 +75,7 @@ const Navbar = () => {
 
   const handleClick = () => {
     setToggle((prev) => !prev)
+    setHidden(false);
   }
 
   return (
@@ -129,7 +131,7 @@ const Navbar = () => {
           </BurgerButton>
         </div>
 
-        <div className={`bg-white flex flex-col w-full h-[100vh] p-10 absolute top-0 right-0 ${toggle&&'hidden'}`}>
+        <div className={`bg-white flex flex-col w-full h-[100vh] p-10 absolute top-0 right-0 ${hidden && 'hidden'} ${toggle ? 'slide-out-left': 'slide-in-left'}`}>
           <img 
             className="rotate-45 w-[60px] self-end" 
             src="./plus.svg" 

@@ -9,7 +9,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className="gidcss">
+    <div className="gidcss fade-in">
       <Header />
       <Services />
       <AboutUs />
