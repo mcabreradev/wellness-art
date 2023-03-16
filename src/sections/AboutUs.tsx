@@ -30,6 +30,7 @@ const BookTitle = tw(Title)`
   pt-5 
   lg:text-lg
   hidden lg:block
+  text-center
 `;
 
 const Paragraph = tw.p`
@@ -96,7 +97,7 @@ function AboutUs() {
             We are a small brand with a huge heart
           </Title>
           <Paragraph>
-            Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain
+            Find more about us
           </Paragraph>
         </Up>
       </Container>
@@ -107,17 +108,30 @@ function AboutUs() {
             <img src="./nan.png"/>
             <BookTitle>
               Book Nan
+              <br/>
+              RMT
             </BookTitle>
             <BookSchedule>
-              Saturday: 10am - 6pm<br/>
-              Friday and Sunday:<br/>
-              2pm - 8pm
+              You can find Nan:
+              <br/>
+              Monday to Sunday
             </BookSchedule>
           </PeoplePhoto>
           <div className="lg:pl-28 w-auto lg:w-[600px]">
-            <Title className="text-center lg:text-start">Bowonkit Tubsuri - (Nan)</Title>
+            <Title className="text-center lg:text-start">Bowonkit (Nan) Tubsuri</Title>
             <Paragraph className="pt-4 lg:pt-3">
-            Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and is accredi...
+              <p className="mb-5">
+              Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the Thailand Ministry of Labor and Education as an Advanced Master Trainer.
+              </p>
+              <p className="mb-5">
+              Nan has been in Canada since 2019, graduating from the 2200-hour certification training in advanced clinical massage therapy at The Canadian Institute of Traditional Chinese Medicine in Calgary, and from the South Edmonton School of Massage Therapy in Edmonton.
+              </p>
+              <p className="mb-5">
+              He enjoys helping people to relieve stress and improve circulation and mobility. As a teacher and massage therapist he loves to share his knowledge about how to create a healthy and balanced life.
+              </p>
+              <p className="mb-5">
+              Nan performs holistic treatments mixing western and eastern techniques including deep tissue, relaxation, reflexology, Thai Yoga Massage, acupressure, energy lines and trigger point therapy.
+              </p>
             </Paragraph>
 
             <p className="text-lg leading-snug text-gray-800 font-domine pt-8 pb-5">Services</p>
@@ -139,15 +153,33 @@ function AboutUs() {
             <img src="./cata.png"/>
             <BookTitle>
               Book Cata
+              <br/>
+              RMT & MOT
             </BookTitle>
             <BookSchedule>
-              Tuesday, Wednesday, <br/>Thursday: 1-8pm
+              You can find Cata: 
+              <br/> 
+              Tuesday, Thursday, Friday <br/>and Sunday
             </BookSchedule>
           </PeoplePhoto>
           <div className="lg:pl-28 w-auto lg:w-[600px]">
             <Title className="text-center lg:text-start">Catalina Castañeda</Title>
             <Paragraph className="pt-4 lg:pt-3">
-            Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the and is accredited by the and is accredi...
+              <p className="mb-5">
+              Catalina cultivates a peaceful and compassionate environment in which to provide nourishing experiences for mind, body and soul.
+              </p>
+              <p className="mb-5">
+              She offers deep tissue, therapeutic, sports, pre/post natal, cupping, hot stones, foot reflexology and Thai yoga massage. She enjoys using a variety of techniques, and incorporates Thai stretching, energy lines and trigger point therapy to ensure that clients feel restored and renewed after each treatment.
+              </p>
+              <p className="mb-5">
+              In addition to completing Advanced Clinical Massage Therapy training at Alberta’s  Makami College, Catalina studied ITM (International Training Massage) in Chiang Mai, Thailand, and was certified to perform Thai yoga massage in Calgary in 2017.  
+              </p>
+              <p className="mb-5">
+                She came back to the school to become a Manual Osteopathic Therapist and graduate in March 2022. Under the scope of MOT, she can do myofascial remodeling, osteoarticular adjustment, visceral manipulation, craniosacral and lymphatic drainage treatments.
+              </p>
+              <p className="mb-5">
+              She recommends 75-90 minute sessions to allow time for all of the healing benefits of her treatments.
+              </p>
             </Paragraph>
 
             <p className="text-lg leading-snug text-gray-800 font-domine pt-8 pb-5">Services</p>

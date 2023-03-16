@@ -69,9 +69,13 @@ function Services() {
             Our Service
           </Title>
           <Paragraph className="pb-8 lg:pb-5">
-            Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise
+            We crafted our services making sure to cover all our clients' needs.
           </Paragraph>
-          <Button className="mt-5 hidden lg:block" size="lg">Book a masagge</Button>
+          <Button 
+            className="mt-5 hidden lg:block" 
+            size="lg" 
+            href={import.meta.env.VITE_BOOK_A_MASAGGE_LINK}
+            >Book a masagge</Button>
         </Left>
 
         <Right>

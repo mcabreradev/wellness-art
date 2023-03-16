@@ -1,7 +1,10 @@
 import tw from "tailwind-styled-components";
+import Carousel from 'framer-motion-carousel'
+
 import Button from "./Button";
 
 type Props = {};
+
 
 const Wrapper = tw.div`
   flex 
@@ -21,7 +24,7 @@ const Container = tw.div`
   flex-col 
   items-start 
   justify-between 
-  lg:w-[382px]
+  lg:w-[500px]
 `;
 
 const Title = tw.h1`
@@ -44,26 +47,44 @@ const Paragraph = tw.p`
   font-poppins
 `;
 
-const Hero = ({}: Props) => {
+const Hands = ({}) => {
   return (
-    <Wrapper>
+    <>
       <Container>
         <Title className="pt-16 lg:py-5">
-          Sientete bien y llega más lejos
+        The art of creating ourselves anew
         </Title>
         <Paragraph className="py-5">
-          Tenemos los masajes necesarios para ayudarte a alcanzar tus metas
+        The massage table is our easel and our client is our canvas. Our job, as artists and therapists, is to allow our canvas to represent relaxation and good health.
         </Paragraph>
         <Button 
           className="mt-5 mx-auto lg:mx-0" 
           size="lg"
-          href="https://wellnessartinc.clinicsense.com/"
+          href={import.meta.env.VITE_BOOK_A_MASAGGE_LINK}
           >Book a masagge</Button>
       </Container>
 
-      <div className="">
-        <img src="./hands.png" />
+      <div className="lg:flex lg:w-[633px]">
+        <Carousel 
+          autoPlay={true} 
+          interval={import.meta.env.VITE_CAROUSEL_INTERVAL} 
+          loop={true} 
+          renderArrowLeft={()=>null} 
+          renderArrowRight={()=>null} 
+          renderDots={()=>null}
+          >
+            <img src="./hands1.jpg" />
+            <img src="./hands2.jpg" />
+        </Carousel>
       </div>
+    </>
+   )
+}
+
+const Hero = ({}: Props) => {
+  return (
+    <Wrapper>
+      <Hands />
     </Wrapper>
   );
 };

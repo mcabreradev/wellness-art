@@ -14,9 +14,11 @@
     "@react-google-maps/api": "^2.12.2",
     "flowbite": "^1.5.1",
     "flowbite-react": "^0.1.5",
+    "framer-motion-carousel": "^2.0.1",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
+    "react-google-maps": "^9.4.5",
     "react-scroll": "^1.8.7",
     "simple-react-google-maps": "^1.1.2",
     "styled-components": "^5.3.5"

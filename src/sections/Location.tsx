@@ -26,6 +26,7 @@ const Paragraph = tw.p`
   not-italic 
   text-black
   font-poppins
+  text-center
 `;
 
 export default function Location() {
@@ -33,7 +34,7 @@ export default function Location() {
     <Container className={'location'} name="location">
       <div className="my-24 lg:my-28 px-8 lg:px-0">
         <Title>Located in the center of Edmont</Title>
-        <Paragraph>We offer you the best instalaciones para birndarte el mejor servicio</Paragraph>
+        <Paragraph>We offer you the best location with free parking spot </Paragraph>
       </div>
       <Map/>
     </Container>

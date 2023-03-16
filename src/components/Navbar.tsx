@@ -120,7 +120,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex">
-          <Button type="button" className="hidden lg:block" href="https://wellnessartinc.clinicsense.com/">Book a masagge</Button>
+          <Button type="button" className="hidden lg:block" href={import.meta.env.VITE_BOOK_A_MASAGGE_LINK}>Book a masagge</Button>
           <BurgerButton
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -175,7 +175,7 @@ const Navbar = () => {
               <Button 
                 className="inline-flex items-start justify-start px-12 py-2.5 bg-indigo-600 rounded-full" 
                 size="lg"
-                href="https://wellnessartinc.clinicsense.com/"
+                href={import.meta.env.VITE_BOOK_A_MASAGGE_LINK}
                 >Book a masagge</Button>
             </li>
           </ul>

@@ -1,36 +1,59 @@
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { useLoadScript, GoogleMap, MarkerF } from '@react-google-maps/api';
+import { useMemo } from 'react';
 
 const containerStyle = {
-  width: "100%",
-  height: "479px",
-};
+    width: "100%",
+    height: "479px",
+  };
 
 const center = {
   lat: 53.5433385,
   lng: -113.5376438,
 };
 
-// const position = {
-//   lat: 37.772,
-//   lng: -122.214
-// }
-
-const onLoad = marker => {
-  console.log('marker: ', marker)
-}
-
-export default function Map() {
-  return (
-    <LoadScript 
-      googleMapsApiKey="AIzaSyCouv1xaUfUFQRvJNnzDSydS__PysjwaeA">
-      <GoogleMap 
-        mapContainerStyle={containerStyle} 
-        center={center} 
-        zoom={16}>
-        <Marker 
-          onLoad={onLoad}
-          position={center} />
-      </GoogleMap>
-    </LoadScript>
+const Map = () => {
+  const libraries = useMemo(() => ['places'], []);
+  const mapCenter = useMemo(
+    () => (center),
+    []
   );
-}
+
+
+  const mapOptions = useMemo<google.maps.MapOptions>(
+    () => ({
+      disableDefaultUI: true,
+      clickableIcons: true,
+      scrollwheel: false,
+    }),
+    []
+  );
+
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+    libraries: libraries as any,
+  });
+
+  if (!isLoaded) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <div style={containerStyle}>
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        options={mapOptions}
+        zoom={16}
+        center={mapCenter}
+        mapTypeId={google.maps.MapTypeId.ROADMAP}
+        onLoad={() => console.log('Map Component Loaded...')}
+      >
+        <MarkerF 
+          position={mapCenter} 
+          onLoad={() => console.log('Marker Loaded')} 
+          />
+      </GoogleMap>
+    </div>
+  );
+};
+
+export default Map;
