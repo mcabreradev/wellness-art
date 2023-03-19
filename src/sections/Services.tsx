@@ -1,10 +1,11 @@
 import tw from "tailwind-styled-components";
-import { Element } from 'react-scroll'
+
+import { DivProps } from '../Interfaces';
 
 import Button from "../components/Button";
 import Accordion from "../components/Accordion";
 
-const Wrapper = tw.div`
+const Wrapper = tw.div<DivProps>`
   bg-beige
 `;
 

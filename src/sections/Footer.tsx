@@ -1,6 +1,7 @@
 import tw from "tailwind-styled-components";
+import { DivProps } from '../Interfaces';
 
-const Wrapper = tw.div`
+const Wrapper = tw.div<DivProps>`
   bg-secondary
   h-max
 `;

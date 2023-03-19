@@ -1,8 +1,9 @@
 import tw from "tailwind-styled-components";
+import { DivProps } from '../Interfaces';
 
 import Phil from '../components/Pill';
 
-const Wrapper = tw.div`
+const Wrapper = tw.div<DivProps>`
   container 
   max-w-7xl 
   mx-auto

@@ -1,7 +1,9 @@
 import tw from "tailwind-styled-components";
+import { DivProps } from '../Interfaces';
+
 import Map from '../components/Map'
 
-const Container = tw.div`
+const Container = tw.div <DivProps>`
   bg-white
   flex
   items-center 
