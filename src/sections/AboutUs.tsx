@@ -44,6 +44,17 @@ const Paragraph = tw.p`
   w-full lg:w-[500px]
 `;
 
+const DescriptionContainer = tw.div`
+  font-normal 
+  text-base lg:text-lg 
+  leading-7 lg:leading-[1.8rem] 
+  not-italic 
+  text-black
+  font-poppins
+  pb-5 
+  w-full lg:w-[500px]
+`;
+
 const BookSchedule = tw(Paragraph)`
   pt-4 
   lg:text-sm 
@@ -119,7 +130,7 @@ function AboutUs() {
           </PeoplePhoto>
           <div className="lg:pl-28 w-auto lg:w-[600px]">
             <Title className="text-center lg:text-start">Bowonkit (Nan) Tubsuri</Title>
-            <Paragraph className="pt-4 lg:pt-3">
+            <DescriptionContainer className="pt-4 lg:pt-3">
               <p className="mb-5">
               Nan is a talented massage therapist and Thai Yoga Massage instructor with expertise in a variety of pain management techniques. He has over 12 years of experience in Thai Massage and is accredited by the Thailand Ministry of Labor and Education as an Advanced Master Trainer.
               </p>
@@ -132,7 +143,7 @@ function AboutUs() {
               <p className="mb-5">
               Nan performs holistic treatments mixing western and eastern techniques including deep tissue, relaxation, reflexology, Thai Yoga Massage, acupressure, energy lines and trigger point therapy.
               </p>
-            </Paragraph>
+            </DescriptionContainer>
 
             <p className="text-lg leading-snug text-gray-800 font-domine pt-8 pb-5">Services</p>
 
@@ -164,7 +175,7 @@ function AboutUs() {
           </PeoplePhoto>
           <div className="lg:pl-28 w-auto lg:w-[600px]">
             <Title className="text-center lg:text-start">Catalina Castañeda</Title>
-            <Paragraph className="pt-4 lg:pt-3">
+            <DescriptionContainer className="pt-4 lg:pt-3">
               <p className="mb-5">
               Catalina cultivates a peaceful and compassionate environment in which to provide nourishing experiences for mind, body and soul.
               </p>
@@ -180,7 +191,7 @@ function AboutUs() {
               <p className="mb-5">
               She recommends 75-90 minute sessions to allow time for all of the healing benefits of her treatments.
               </p>
-            </Paragraph>
+            </DescriptionContainer>
 
             <p className="text-lg leading-snug text-gray-800 font-domine pt-8 pb-5">Services</p>
 

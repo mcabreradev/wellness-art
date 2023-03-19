@@ -45,11 +45,11 @@ const Map = () => {
         zoom={16}
         center={mapCenter}
         mapTypeId={google.maps.MapTypeId.ROADMAP}
-        onLoad={() => console.log('Map Component Loaded...')}
+        onLoad={() => null}
       >
         <MarkerF 
           position={mapCenter} 
-          onLoad={() => console.log('Marker Loaded')} 
+          onLoad={() => null} 
           />
       </GoogleMap>
     </div>

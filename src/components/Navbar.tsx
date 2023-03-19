@@ -86,34 +86,34 @@ const Navbar = () => {
           id="navbar-sticky"
         >
           <Link to="header" spy={true} smooth={true} offset={0} duration={500}>
-            <a href="/" className="flex items-center">
+            <div className="flex items-center">
               <img
                 src="./wellness.svg"
                 className="mr-4 h-8 sm:h-9"
                 alt="Wellness Logo"
               />
-            </a>
+            </div>
           </Link>
 
           <ul className="flex flex-col lg:pl-28 p-4 mt-4 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium ">
             <li>
               <Link to="services" spy={true} smooth={true} offset={-60} duration={750}>
-                <NavbarItem className="navbar-item" href="#">Services</NavbarItem>
+                <NavbarItem className="navbar-item">Services</NavbarItem>
               </Link>
             </li>
             <li>
               <Link to="about-us" spy={true} smooth={true} offset={-50} duration={500}>
-                <NavbarItem className="navbar-item" href="#">Therapists</NavbarItem>
+                <NavbarItem className="navbar-item">Therapists</NavbarItem>
               </Link>
             </li>
             <li>
               <Link to="location" spy={true} smooth={true} offset={-70} duration={500}>
-                <NavbarItem className="navbar-item" href="#">Location</NavbarItem>
+                <NavbarItem className="navbar-item">Location</NavbarItem>
               </Link>
             </li>
             <li>
               <Link to="footer" spy={true} smooth={true} offset={50} duration={1000}>
-                <NavbarItem className="navbar-item" href="#">Contact</NavbarItem>
+                <NavbarItem className="navbar-item">Contact</NavbarItem>
               </Link>
             </li>
           </ul>
@@ -138,13 +138,13 @@ const Navbar = () => {
             onClick={handleClick}/>
 
           <Link to="header" spy={true} smooth={true} offset={0} duration={500} onClick={handleClick}>
-            <a href="/" className="">
+            <div className="">
               <img
                 src="./wellness.svg"
                 className="h-12"
                 alt="Wellness Logo"
               />
-            </a>
+            </div>
           </Link>
 
           <ul className="flex flex-col py-4 mt-4">
@@ -152,23 +152,23 @@ const Navbar = () => {
               <Link to="services" spy={true} smooth={true} offset={20} duration={750} onClick={handleClick}>
                 <NavbarItem 
                   className="text-[24px]" 
-                  href="#">Services
+                >Services
                   </NavbarItem>
               </Link>
             </li>
             <li className="border-b border-gray-300 pt-8 pb-4">
               <Link to="about-us" spy={true} smooth={true} offset={0} duration={750} onClick={handleClick}>
-                <NavbarItem className="text-[24px]" href="#">Therapists</NavbarItem>
+                <NavbarItem className="text-[24px]">Therapists</NavbarItem>
               </Link>
             </li>
             <li className="border-b border-gray-300 pt-8 pb-4">
               <Link to="location" spy={true} smooth={true} offset={0} duration={750} onClick={handleClick}>
-                <NavbarItem className="text-[24px]" href="#">Location</NavbarItem>
+                <NavbarItem className="text-[24px]">Location</NavbarItem>
               </Link>
             </li>
             <li className="border-b border-gray-300 pt-8 pb-4">
               <Link to="footer" spy={true} smooth={true} offset={0} duration={750} onClick={handleClick}>
-                <NavbarItem className="text-[24px]" href="#">Contact</NavbarItem>
+                <NavbarItem className="text-[24px]">Contact</NavbarItem>
               </Link>
             </li>
             <li className="pt-12">
