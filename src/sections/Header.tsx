@@ -1,19 +1,19 @@
-import tw from "tailwind-styled-components";
+import tw from 'tailwind-styled-components';
 
-import { DivProps } from '../Interfaces';
+import Hero from '@/components/Hero';
+import Navbar from '@/components/Navbar';
 
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
+import type { DivProps } from '@/types';
 
 const Wrapper = tw.div<DivProps>``;
 
 function Header() {
   return (
-    <Wrapper className={'header'} name="header">
+    <Wrapper className='header' name='header'>
       <Navbar />
       <Hero />
     </Wrapper>
-  )
+  );
 }
 
-export default Header
+export default Header;
